@@ -9,15 +9,17 @@ package aulapratica2;
  *
  * @author helder
  */
-public class ClientePF extends Cliente{
+public class ClientePF extends Cliente
+{
     
     private String cpf;
     
     
     
-     public ClientePF(String nome, String endereco,String cpf){
+    public ClientePF(String nome, String endereco,String cpf)
+    {
         super(nome,endereco);
-        this.cpf=cpf;
+        this.cpf = cpf;
         
     }
     
@@ -26,11 +28,13 @@ public class ClientePF extends Cliente{
         return cpf;
     }
     
-    public void setCpf(String cpf){
+    public void setCpf(String cpf)
+    {
         this.cpf=cpf;
     }
-     
-    public String toString(){
-        return super.toString()+"cpf:"+cpf;
+    public String toString()
+    {
+        return super.toString() + " " + cpf;
     }
+    
 }
