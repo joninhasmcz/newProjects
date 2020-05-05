@@ -73,6 +73,7 @@ public class LeitorDeArquivosTexto
     private int lerCaractereDoBuffer()
     {
         int ret = bufferDeLeitura[ponteiro];
+        // System.out.println(this);
         incrementarPonteiro();
         return ret;
     }
@@ -81,13 +82,13 @@ public class LeitorDeArquivosTexto
         int c = lerCaractereDoBuffer();
         lexema += (char)c;
         return c;
-    }  
+    }
 
     public void retroceder()
     {
         ponteiro--;
         lexema = lexema.substring(0, lexema.length() - 1);
-        if(ponteiro < 0) 
+        if(ponteiro < 0)
             ponteiro = TAMANHO_BUFFER * 2 - 1;
     }
 
